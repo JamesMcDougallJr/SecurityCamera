@@ -1,0 +1,6 @@
+*.pyc
+*__pycache*
+flask
+.vscode
+.idea
+.env
