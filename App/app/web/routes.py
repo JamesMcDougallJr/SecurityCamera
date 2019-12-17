@@ -9,11 +9,7 @@ from app import app
 #else:
 #    from ..backend.camera import Camera
 
-<<<<<<< HEAD
-from .backend.camera_pi import Camera
-=======
 from .. import py_camera
->>>>>>> 2d327f09f387c83c7154e0d562ee6010d2b02735
 
 @app.route('/')
 def index():
