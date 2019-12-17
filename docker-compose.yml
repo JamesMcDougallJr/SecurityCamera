@@ -1,11 +1,27 @@
-version: "3.7"
+version: "2"
 services:
+  nginx:
+    volumes:
+      - ./Docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    image: nginx:1.13.7
+    depends_on:
+      - python
+    container_name: nginx
+    networks:
+      - cam-network
+    ports:
+      - 80:80
   python:
+    networks:
+      cam-network:
+        aliases:
+          - flask-app
     build:
       context: .
       dockerfile: Docker/pi/Dockerfile
-    command: gunicorn --bind 0.0.0.0:5000 wsgi:app
-    ports:
-      - 5000:5000
+    command: flask run --host=0.0.0.0
     volumes:
       - ./App:/app:cached
+
+networks:
+    cam-network:

@@ -4,10 +4,12 @@ from importlib import import_module
 from app import app
 
 # import camera driver
-if os.environ.get('CAMERA'):
-    Camera = import_module('camera_' + os.environ['CAMERA']).Camera
-else:
-    from ..backend.camera import Camera
+#if os.environ.get('CAMERA'):
+#    Camera = import_module('camera_' + os.environ['CAMERA']).Camera
+#else:
+#    from ..backend.camera import Camera
+
+from ..backend.camera_pi import Camera
 
 @app.route('/')
 def index():
