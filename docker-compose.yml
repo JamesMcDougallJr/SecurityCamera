@@ -12,6 +12,7 @@ services:
     ports:
       - 80:80
   python:
+    privileged: true
     networks:
       cam-network:
         aliases:
