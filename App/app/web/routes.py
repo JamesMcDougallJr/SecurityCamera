@@ -9,7 +9,7 @@ from app import app
 #else:
 #    from ..backend.camera import Camera
 
-from ..backend.camera_pi import Camera
+from .backend.camera_pi import Camera
 
 @app.route('/')
 def index():
