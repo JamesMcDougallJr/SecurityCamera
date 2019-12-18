@@ -1,5 +1,5 @@
 # Create the docker container for the backend
-FROM python:3.7.3-alpine3.9
+FROM balenalib/rpi-raspbian
 WORKDIR /app
 COPY App/requirements.txt /app
 COPY App /app
