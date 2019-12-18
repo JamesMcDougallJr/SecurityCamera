@@ -11,6 +11,8 @@ services:
       - cam-network
     ports:
       - 80:80
+    command: [nginx-debug, '-g', 'daemon off;']
+
   python:
     privileged: true
     networks:
