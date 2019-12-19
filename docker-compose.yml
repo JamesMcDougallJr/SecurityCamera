@@ -21,7 +21,7 @@ services:
           - flask-app
     build:
       context: .
-      dockerfile: Docker/server/Dockerfile
+      dockerfile: Docker/pi/Dockerfile
     command:  gunicorn --bind=0.0.0.0:5000 --threads 5 wsgi:app
     volumes:
       - ./App:/app:cached
