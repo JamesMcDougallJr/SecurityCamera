@@ -1,5 +1,5 @@
 build:
   docker:
-    web: App/Dockerfile_Heroku
+    web: Application/Dockerfile_Heroku
 run:
   web: gunicorn -w 4 --bind 0.0.0.0:$PORT wsgi:app
