@@ -8,8 +8,9 @@ from .. import py_camera
 @app.route('/')
 def index():
     """Video streaming home page."""
-    return flask.render_template('root.html')
-
+    if 'DYNO' in os.environ:
+        return flask.render_template('root.html')
+    return flask.render_template('root_pi.html')
 
 def gen(camera):
     """Video streaming generator function."""

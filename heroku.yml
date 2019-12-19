@@ -1,5 +1,5 @@
 build:
   docker:
-    web: Docker/heroku/Dockerfile
+    web: Docker/server/Dockerfile
 run:
   web: gunicorn -w 4 --bind 0.0.0.0:$PORT wsgi:app
