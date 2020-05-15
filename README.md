@@ -10,4 +10,4 @@ I also got some great experience working with docker-compose to orchestrate the 
 ## UPDATE May 2020
 As of May 2nd, 2020 the stream is available at http://berserkcomputing.com port 65535
 
-My goal is that by the end of the summer I am able to use facial recognition and classification to let me know everytime a member of my family is at the front door, and notify my of this occuring. I'm not really trying to spy on my family, just trying to test out some cool programs!
+My goal is that by the end of the summer I am able to use facial recognition and classification to let me know everytime a member of my family is at the front door, and notify me. I'm not really trying to spy on my family, just trying to test out some cool programs!
